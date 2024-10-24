@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/selection-panel.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <!-- <div class="hero-body"> -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title">MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images with Optimal Training Supervision</h1> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://wangrc.site">Ruicheng Wang</a><sup>1,2</sup>,</span>
+              <span class="author-block"><a href="https://github.com/sicxu">Sicheng Xu</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="" onclick="return false;">Cassie Dai</a><sup>3,2</sup>,</span>
+              <span class="author-block"><a href="https://jeffreyxiang.github.io/">Jianfeng Xiang</a><sup>4,2</sup>,</span>
+              <span class="author-block"><a href="https://yudeng.github.io/">Yu Deng</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ&hl=en">Xin Tong</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://jlyang.org/">Jiaolong Yang</a><sup>2</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>USTC,</span>
+              <span class="author-block"><sup>2</sup>Microsoft Research,</span>
+              <span class="author-block"><sup>3</sup>Harvard,</span>
+              <span class="author-block"><sup>4</sup>Tsinghua University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark" onclick="alert('Coming soon!'); return false;" target="_blank">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark" onclick="alert('Coming soon!'); return false;" target="_blank">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/microsoft/moge" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/teaser/teaser_crf28.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">MoGe</span> turns 2D single images into 3D point maps.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present MoGe, a powerful model for recovering 3D geometry from monocular open-domain images. 
+              Given a single image, our model directly predicts a 3D point map of the captured scene with an affine-invariant representation, 
+              which is agnostic to true global scale and shift. 
+              This new representation precludes ambiguous supervision in training and facilitate effective geometry learning. 
+              Furthermore, we propose a set of novel global and local geometry supervisions that empower the model to learn high-quality geometry. 
+              These include a robust, optimal, and efficient point cloud alignment solver for accurate global shape learning, 
+              and a multi-scale local geometry loss promoting precise local geometry supervision. 
+              We train our model on a large, mixed dataset and demonstrate its strong generalizability and high accuracy. 
+              In our comprehensive evaluation on diverse unseen datasets, our model significantly outperforms state-of-the-art methods across all tasks 
+              including monocular estimation of 3D point map, depth map, and camera field of view.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <img id="enlarged-image">
+
+  <section class="hero">
+    <div class="container is-max-desktop is-centered">
+      <h2 class="title is-3" style="margin-top: 10px;">Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            Click on the images below to see our point map results as meshes in a 3D viewer. 
+          </p>
+        </div>
+        <div id="toggleTexturedGallery" class="toggle-container">
+          <button class="toggle-button toggle-left">Geometry only</button>
+          <button class="toggle-button toggle-right active">Textured</button>
+        </div>
+        <div class="model-wrapper">
+          <div class="tips-wrapper">
+            <div class="tips-icon">💡Tips</div>
+            <div class="tips-text">
+              <p>● Scroll to zoom in/out</p>
+              <p>● Drag to rotate</p>
+              <p>● Press "shift" and drag to pan</p>
+              <p>● Click on the buttons at the top to switch texture color on/off</p>
+            </div>
+          </div>
+          <model-viewer id="modelViewerGallary" class="model-viewer-texture" loading="eager"
+            poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+            camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+            shadow-intensity="1" ar style="width: 100%; height: 100%;">
+          </model-viewer>
+        </div>
+        <div id="gallerySelectionPanel" class="selection-panel" style="width: 90%; margin-left: 5%;">
+          <img class="selectable-image selected" name="office">  
+          <img class="selectable-image" name="astronauts">
+          <img class="selectable-image" name="tofu">
+          <img class="selectable-image" name="indian_market">
+          <img class="selectable-image" name="chair_and_table">
+          <img class="selectable-image" name="cat_in_room">
+          <img class="selectable-image" name="shop">
+          <img class="selectable-image" name="panda">
+          <img class="selectable-image" name="robot_delivery">
+          <img class="selectable-image" name="anime_girl">
+          <img class="selectable-image" name="medieval_street">
+        </div>
+    </div>
+  </section>
+  <!--/ Interactive Mesh. -->
+
+  <section class="hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3" style="margin-top: 10px;">Results on Videos</h2>
+        <div class="horizontal-container">
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/Friends.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/Breakdance.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/MountEverest.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/Pantry.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/Train.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_recon/Venice.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      <p style="margin-top: 20px; margin-bottom: 20px;">
+        We predict the point maps for the video frames and 
+        then simply use rigid transformations to register them with image matching (<a href="https://github.com/PruneTruong/DenseMatching">PDCNet</a>).
+      </p>
+    </div>
+  </section>
+
+  <!-- Model Comparison. -->
+  <section class="hero">
+    <div class="container is-max-desktop" id="comparison_container">
+      <h2 class="title is-3" style="margin-top: 10px; align-self: flex-start;">Comparison to Other Models</h3>
+        <div class="content has-text-justified" style="align-self: flex-start;">
+          <p>
+            Select a model from the dropdown menu to compare the results of our model MoGe with different models. 
+          </p>
+        </div>
+
+        <div id="toggleTexturedComparison" class="toggle-container">
+          <button class="toggle-button toggle-left">Geometry only</button>
+          <button class="toggle-button toggle-right active">Textured</button>
+        </div>
+
+        <div class="model-container" id="model-compare-wrapper">
+          <!-- Model 1 Viewer with Label -->
+          <div class="model-wrapper-comparison">
+            <div class="model-label">MoGe</div>
+            <model-viewer id="modelViewerComparison1" class="model-viewer-texture" loading="eager"
+              poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+              camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+              shadow-intensity="1" ar style="width: 100%; height: 100%;">
+            </model-viewer>
+          </div>
+          <!-- Model 2 Viewer with Label -->
+          <div class="model-wrapper-comparison">
+            <div class="tips-wrapper">
+              <div class="tips-icon">💡Tips</div>
+              <div class="tips-text">
+                <p>● Scroll to zoom in/out</p>
+                <p>● Drag to rotate</p>
+                <p>● Press "shift" and drag to pan</p>
+                <p>● Click on the buttons at the top to switch texture color on/off</p>
+              </div>
+            </div>
+            <div id="comparisonFootnote">
+              *No camera intrinsics prediction; using ours instead.
+            </div>
+            <select id="comparisonBaselineSelection" class="dropdown model-label">
+              <option value="dust3r">DUSt3R</option>
+              <option value="leres">LeReS</option>
+              <option value="unidepth">UniDepth</option>
+              <option value="metric3d_v2">Metric3D V2*</option>
+              <option value="depth_anything_v2">Depth Anything V2*</option>
+            </select>
+            <model-viewer id="modelViewerComparison2" class="model-viewer-texture" loading="eager"
+              poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+              camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+              shadow-intensity="1" ar style="width: 100%; height: 100%;">
+            </model-viewer>
+          </div>
+
+        </div>
+
+        <div class="selection-panel" id="comparisonSelectionPanel" style="margin-top: 10px;">
+          <img class="selectable-image selected" name="rabbit_cake">
+          <img class="selectable-image" name="maitreya_buddha">
+          <img class="selectable-image" name="indian_market">
+          <img class="selectable-image" name="tiny_sheep">
+          <img class="selectable-image" name="hall">
+          <img class="selectable-image" name="book_corridor">
+          <img class="selectable-image" name="city_birdview">
+          <img class="selectable-image" name="cat_in_room">
+          <img class="selectable-image" name="taj_mahal">
+          <img class="selectable-image" name="anime_girl">
+          <img class="selectable-image" name="robot_impression">
+          <img class="selectable-image" name="girl_and_pegions_painting">
+        </div>
+
+    </div>
+
+  </section>
+
+  <!--/Model Comparison. -->
+
+  <!-- Video Comparison. -->
+  <section class="hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3" style="margin-top: 30px;">More Comparisons Uncurated</h2>
+      <p>
+        Check how our method compares to other methods on uncurated images (sourced from first 100 training images
+        from <a href="https://data.vision.ee.ethz.ch/cvl/DIV2K/">DIV2K</a>).
+      </p>
+      <!-- Geometry/Textured Toggle Button -->
+      <div id="toggleVideoComparison" class="toggle-container">
+        <button class="toggle-button toggle-left active">Geometry only</button>
+        <button class="toggle-button toggle-right">Textured</button>
+      </div>
+        <!-- Comparison Labels -->
+        <div class="comparison-container">
+          <div class="comparison-labels">
+            <span style="text-align: center; font-weight: bold; margin: 1px;">Original Image</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">Ours</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">LeReS</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">DUSt3R</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">UniDepth</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">Metric3D V2*</span>
+            <span style="text-align: center; font-weight: bold; margin: 1px;">Depth Anything V2*</span>
+          </div>
+          <p style="align-self: flex-end; text-align: right; font-size: smaller;">
+            *No camera intrinsics prediction; using ours instead.
+          </p>
+          <!-- Video Comparison -->
+          <video id="video-compare" autoplay muted loop playsinline style="width: 100%; display: block;">
+            <source src="./static/videos/compare_videos/mesh/resized_combined_0001_to_0010.mp4" type="video/mp4"
+              id="video-source">
+          </video>
+        </div>
+
+        <!-- Video Carousel Buttons -->
+        <div class="custom-carousel-container" style="text-align: center; margin-bottom: 20px;">
+          <button id="prevVideo" class="custom-carousel-btn">Previous</button>
+          <span id="videoCounter" class="custom-video-counter">Image 1-10 of 100</span>
+          <button id="nextVideo" class="custom-carousel-btn">Next</button>
+        </div>
+
+        <div class="content has-text-justified"></div>
+      </div>
+  </section>
+
+  <!--/ Video Comparison. -->
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wang2024moge,
+  author    = {Wang, Ruicheng and Xu, Sicheng and Dai, Cassie and Xiang, Jianfeng and Deng, Yu and Tong, Xin and Yang, Jiaolong},
+  title     = {MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images with Optimal Training Supervision},
+  journal   = {arXiv preprint},
+  year      = {2024},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is source from <a href="https://github.com/nerfies/nerfies.github.io">here</a> under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="static/js/model-viewer.js"></script>
+  <script src="static/js/gallery.js"></script>
+  <script src="static/js/selection-panel.js"></script>
+
+  <script src="static/js/comparison.js"></script>
+
+  <script src="static/js/video_comparison.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+</body>
+
+</html>
