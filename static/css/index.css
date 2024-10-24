@@ -567,20 +567,16 @@ model-viewer {
   bottom: 10px;
 }
 
-.horizontal-container {
-  display: flex; 
-  justify-content: left; 
-  align-items: center; 
-  flex-direction: row;
-  overflow-x: scroll;
+.carousel {
+  overflow-x: hidden;
 }
 
-.horizontal-container .item {
-  margin: 1%;
-  min-width: 31.3%;
+.carousel .item {
+  margin: 0% 8% 8% 8%;
+  /* min-width: 31.3%; */
 }
 
-.horizontal-container .item video{
+.carousel .item video{
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }

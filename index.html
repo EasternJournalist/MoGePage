@@ -216,38 +216,38 @@
   <section class="hero is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3" style="margin-top: 10px;">Results on Videos</h2>
-        <div class="horizontal-container">
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/Friends.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/Breakdance.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/MountEverest.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/Pantry.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/Train.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/video_recon/Venice.mp4" type="video/mp4">
-            </video>
-          </div>
+      <div id="carouselVideoReconstruction" class="carousel" data-slides-to-scroll="3" data-slides-to-show="3">
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/Friends.mp4" type="video/mp4">
+          </video>
         </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/Breakdance.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/MountEverest.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/Pantry.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/Train.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video_recon/Venice.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
       <p style="margin-top: 20px; margin-bottom: 20px;">
         We predict the point maps for the video frames and 
         then simply use rigid transformations to register them with image matching (<a href="https://github.com/PruneTruong/DenseMatching">PDCNet</a>).
