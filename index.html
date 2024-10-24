@@ -171,44 +171,44 @@
   <section class="hero">
     <div class="container is-max-desktop is-centered">
       <h2 class="title is-3" style="margin-top: 10px;">Results</h3>
-        <div class="content has-text-justified">
-          <p>
-            Click on the images below to see our point map results as meshes in a 3D viewer. 
-          </p>
-        </div>
-        <div id="toggleTexturedGallery" class="toggle-container">
-          <button class="toggle-button toggle-left">Geometry only</button>
-          <button class="toggle-button toggle-right active">Textured</button>
-        </div>
-        <div class="model-wrapper">
-          <div class="tips-wrapper">
-            <div class="tips-icon">💡Tips</div>
-            <div class="tips-text">
-              <p>● Scroll to zoom in/out</p>
-              <p>● Drag to rotate</p>
-              <p>● Press "shift" and drag to pan</p>
-              <p>● Click on the buttons at the top to switch texture color on/off</p>
-            </div>
+      <div class="content has-text-justified">
+        <p>
+          Click on the images below to see our point map results as meshes in a 3D viewer. 
+        </p>
+      </div>
+      <div id="toggleTexturedGallery" class="toggle-container">
+        <button class="toggle-button toggle-left">Geometry only</button>
+        <button class="toggle-button toggle-right active">Textured</button>
+      </div>
+      <div class="model-wrapper">
+        <div class="tips-wrapper">
+          <div class="tips-icon">💡Tips</div>
+          <div class="tips-text">
+            <p>● Scroll to zoom in/out</p>
+            <p>● Drag to rotate</p>
+            <p>● Press "shift" and drag to pan</p>
+            <p>● Click on the buttons at the top to switch texture color on/off</p>
           </div>
-          <model-viewer id="modelViewerGallary" class="model-viewer-texture" loading="eager"
-            poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
-            camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
-            shadow-intensity="1" ar style="width: 100%; height: 100%;">
-          </model-viewer>
         </div>
-        <div id="gallerySelectionPanel" class="selection-panel" style="width: 90%; margin-left: 5%;">
-          <img class="selectable-image selected" name="office">  
-          <img class="selectable-image" name="astronauts">
-          <img class="selectable-image" name="tofu">
-          <img class="selectable-image" name="indian_market">
-          <img class="selectable-image" name="chair_and_table">
-          <img class="selectable-image" name="cat_in_room">
-          <img class="selectable-image" name="shop">
-          <img class="selectable-image" name="panda">
-          <img class="selectable-image" name="robot_delivery">
-          <img class="selectable-image" name="anime_girl">
-          <img class="selectable-image" name="medieval_street">
-        </div>
+        <model-viewer id="modelViewerGallary" class="model-viewer-texture" loading="eager"
+          poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+          camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+          shadow-intensity="1" ar style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+      <div id="gallerySelectionPanel" class="selection-panel" style="width: 100%; aspect-ratio: 3.3/1;">
+        <img class="selectable-image selected" name="office">  
+        <img class="selectable-image" name="astronauts">
+        <img class="selectable-image" name="tofu">
+        <img class="selectable-image" name="indian_market">
+        <img class="selectable-image" name="chair_and_table">
+        <img class="selectable-image" name="cat_in_room">
+        <img class="selectable-image" name="shop">
+        <img class="selectable-image" name="panda">
+        <img class="selectable-image" name="robot_delivery">
+        <img class="selectable-image" name="anime_girl">
+        <img class="selectable-image" name="medieval_street">
+      </div>
     </div>
   </section>
   <!--/ Interactive Mesh. -->
@@ -259,58 +259,57 @@
   <section class="hero">
     <div class="container is-max-desktop" id="comparison_container">
       <h2 class="title is-3" style="margin-top: 10px; align-self: flex-start;">Comparison to Other Models</h3>
-        <div class="content has-text-justified" style="align-self: flex-start;">
-          <p>
-            Select a model from the dropdown menu to compare the results of our model MoGe with different models. 
-          </p>
-        </div>
+      <div class="content has-text-justified" style="align-self: flex-start;">
+        <p>
+          Select a model from the dropdown menu to compare the results of our model MoGe with different models. 
+        </p>
+      </div>
 
-        <div id="toggleTexturedComparison" class="toggle-container">
-          <button class="toggle-button toggle-left">Geometry only</button>
-          <button class="toggle-button toggle-right active">Textured</button>
-        </div>
+      <div id="toggleTexturedComparison" class="toggle-container">
+        <button class="toggle-button toggle-left">Geometry only</button>
+        <button class="toggle-button toggle-right active">Textured</button>
+      </div>
 
-        <div class="model-container" id="model-compare-wrapper">
-          <!-- Model 1 Viewer with Label -->
-          <div class="model-wrapper-comparison">
-            <div class="model-label">MoGe</div>
-            <model-viewer id="modelViewerComparison1" class="model-viewer-texture" loading="eager"
-              poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
-              camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
-              shadow-intensity="1" ar style="width: 100%; height: 100%;">
-            </model-viewer>
-          </div>
-          <!-- Model 2 Viewer with Label -->
-          <div class="model-wrapper-comparison">
-            <div class="tips-wrapper">
-              <div class="tips-icon">💡Tips</div>
-              <div class="tips-text">
-                <p>● Scroll to zoom in/out</p>
-                <p>● Drag to rotate</p>
-                <p>● Press "shift" and drag to pan</p>
-                <p>● Click on the buttons at the top to switch texture color on/off</p>
-              </div>
+      <div class="model-container" id="model-compare-wrapper">
+        <!-- Model 1 Viewer with Label -->
+        <div class="model-wrapper-comparison">
+          <div class="model-label">MoGe</div>
+          <model-viewer id="modelViewerComparison1" class="model-viewer-texture" loading="eager"
+            poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+            camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+            shadow-intensity="1" ar style="width: 100%; height: 100%;">
+          </model-viewer>
+        </div>
+        <!-- Model 2 Viewer with Label -->
+        <div class="model-wrapper-comparison">
+          <div class="tips-wrapper">
+            <div class="tips-icon">💡Tips</div>
+            <div class="tips-text">
+              <p>● Scroll to zoom in/out</p>
+              <p>● Drag to rotate</p>
+              <p>● Press "shift" and drag to pan</p>
+              <p>● Click on the buttons at the top to switch texture color on/off</p>
             </div>
-            <div id="comparisonFootnote">
-              *No camera intrinsics prediction; using ours instead.
-            </div>
-            <select id="comparisonBaselineSelection" class="dropdown model-label">
-              <option value="dust3r">DUSt3R</option>
-              <option value="leres">LeReS</option>
-              <option value="unidepth">UniDepth</option>
-              <option value="metric3d_v2">Metric3D V2*</option>
-              <option value="depth_anything_v2">Depth Anything V2*</option>
-            </select>
-            <model-viewer id="modelViewerComparison2" class="model-viewer-texture" loading="eager"
-              poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
-              camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
-              shadow-intensity="1" ar style="width: 100%; height: 100%;">
-            </model-viewer>
           </div>
-
+          <div id="comparisonFootnote">
+            *No camera intrinsics prediction; using ours instead.
+          </div>
+          <select id="comparisonBaselineSelection" class="dropdown model-label">
+            <option value="dust3r">DUSt3R</option>
+            <option value="leres">LeReS</option>
+            <option value="unidepth">UniDepth</option>
+            <option value="metric3d_v2">Metric3D V2*</option>
+            <option value="depth_anything_v2">Depth Anything V2*</option>
+          </select>
+          <model-viewer id="modelViewerComparison2" class="model-viewer-texture" loading="eager"
+            poster="static/images/loading.gif" touch-action="pan-y" environment-image="legacy" zoom-sensitivity="0.2"
+            camera-controls disable-tap min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 10m"
+            shadow-intensity="1" ar style="width: 100%; height: 100%;">
+          </model-viewer>
         </div>
-
-        <div class="selection-panel" id="comparisonSelectionPanel" style="margin-top: 10px;">
+      </div>
+      <div class="hero-body" style="padding: 0;">
+        <div class="selection-panel" id="comparisonSelectionPanel" style="width: 100% !important; aspect-ratio: 4/1;">
           <img class="selectable-image selected" name="rabbit_cake">
           <img class="selectable-image" name="maitreya_buddha">
           <img class="selectable-image" name="indian_market">
@@ -324,11 +323,10 @@
           <img class="selectable-image" name="robot_impression">
           <img class="selectable-image" name="girl_and_pegions_painting">
         </div>
-
+      </div>
     </div>
-
   </section>
-
+  
   <!--/Model Comparison. -->
 
   <!-- Video Comparison. -->

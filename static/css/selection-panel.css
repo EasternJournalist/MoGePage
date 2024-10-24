@@ -1,4 +1,4 @@
-
+/* 
 #selection-panel.carousel {
   display: flex !important;
   justify-content: center !important; 
@@ -7,7 +7,7 @@
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
-}
+} */
 
 .carousel-item {
   margin: 5px !important; 
@@ -16,15 +16,25 @@
   display: inline-block !important; 
 }
 
+.selection-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: row !important;
+  margin: 10px;
+}
+
 .selectable-image {
+  flex: 0 1 0;
   border-radius: 10px;
   border: 0.5px solid #ccc;  
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
-  width: auto; 
-  height: 110px;
-  padding: 2px;          
+  max-height: 46%;
+  object-fit: contain;
+  padding: 1px;          
   background-color: #dde9f7;   
-  margin: 5px;           
+  margin: 1% 5px 1% 5px;
   cursor: pointer;
 }
 
@@ -55,19 +65,4 @@
 .selectable-image.selected {
   border: 3px solid #4a7aa5; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
-}
-
-/* Add smooth scrolling behavior */
-.carousel {
-  scroll-behavior: smooth;
-}
-
-.selection-panel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  align-items: flex-start;
-  gap: 5px; 
-  width: 100%;
-  margin: 10px;
 }
