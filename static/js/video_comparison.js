@@ -17,7 +17,7 @@ function updateVideoSource() {
   const videoIndexStart = String((currentVideoIndex - 1) * 10 + 1).padStart(4, '0');
   const videoIndexEnd = String(currentVideoIndex * 10).padStart(4, '0');
 
-  const videoPath = `./static/videos/compare_videos/${mode}/resized_combined_${videoIndexStart}_to_${videoIndexEnd}_crf28.mp4`;
+  const videoPath = `./static/videos/compare_videos/${videoIndexStart}_to_${videoIndexEnd}_${mode}_crf28.mp4`;
 
   videoSource.src = videoPath;
   videoElement.load();
